@@ -12,7 +12,7 @@ $response=[];
 if(!$user){
     $response["found"]=false;
 }else{
-    $response["found"]=$user;
+    $response["found"]=true;
     $_SESSION["userid"] = $user[2];
 }
 echo json_encode($response);
