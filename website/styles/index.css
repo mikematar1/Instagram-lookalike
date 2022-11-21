@@ -1,0 +1,12 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap :wrap;
+    margin-top: 2 em;
+
+}
+.loginarea{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2 em;
+}
