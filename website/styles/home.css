@@ -9,3 +9,9 @@
     flex-direction: row;
     background-color: beige;
 }
+.content{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
