@@ -1,24 +1,27 @@
 function loaddata(){
-    
+    getandsetprofile();
     let set = document.createElement("img");
     set.src="./images/settings-logo.png";
-    document.getElementById("header").append(set);
+    set.width="40px";
+    
+    document.getElementById("headerr").append(set);
+    
 }
 function getandsetprofile(){
     const xhr = new XMLHttpRequest();
 
     xhr.onload = function () {
-        let response = JSON.parse(this.responseText)["found"];
-        if(!response){
-            //user was not found
-        }else{
-            //user was found and transition to home page
-            window.location.href="./home.html";
-        }
+       let prof= document.createElement("img");
+       prof.src = "data:image/jpg;charset=utf8;base64,"+this.responseText;
+       document.getElementById("headerr").append(prof);
+
         
     }
 
     xhr.open("GET", "../api/getprofilepic.php")
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhr.send(`username=${username.value}&password=${password.value}`);
+    xhr.send();
+}
+function getallposts(){
+    
 }
