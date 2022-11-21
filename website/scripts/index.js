@@ -1,5 +1,5 @@
 function signupRedirect(){
-    console.log("hey");
+    window.location = "./signup.html";
 }
 function authenticate(){
     let username = document.getElementById("username");
