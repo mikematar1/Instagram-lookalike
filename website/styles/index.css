@@ -2,11 +2,70 @@
     display: flex;
     flex-direction: row;
     flex-wrap :wrap;
-    margin-top: 2 em;
+    margin-top: 2em;
 
 }
 .loginarea{
+    flex: 1;
     display: flex;
     flex-direction: column;
-    margin-top: 2 em;
+    margin-top: 2em;
+    margin-left: 2em;
+    justify-content: start;
+    
+}
+.logininput{
+    width: 40%;
+   text-align: center;
+}
+.input-box {
+    margin-top: 1.5em;
+    padding: 0.6em;
+    width: 60%;
+    height: 1.5em;
+    border: 0;
+    border: 1px solid #DEE2E6;
+    border-radius: 2px;
+    background-color: #F8F9FA;
+}
+
+.input-box-password {
+    margin-top: 0;
+    margin-top: 1em;
+}
+
+.input-box::placeholder {
+    font-size: 11px;
+}
+
+.login-button {
+    width: 65%;
+    border: 0;
+    margin-top: 1em;
+    padding: 0.4em;
+    border-radius: 3px;
+    font-weight: 600;
+    color: white;
+    background-color: #0095f6;
+}
+.login-button:hover{
+    cursor:pointer;
+}
+.signup-redirect {
+    margin-top: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-weight: 300;
+    font-size: 15px;
+    justify-content: row;
+}
+
+.signup-link {
+    font-weight: 600;
+    font-style: normal;
+    color: #0095f6;
+    text-decoration: none;
+}
+.signup-link:hover{
+    cursor:pointer;
 }
