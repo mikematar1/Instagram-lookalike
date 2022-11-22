@@ -1,6 +1,6 @@
 function loaddata(){
-    getallposts();
-
+    
+    getallposts()
     
     
 }
@@ -9,7 +9,7 @@ function getandsetprofile(){
 
     xhr.onload = function () {
        let prof= document.createElement("img");
-       prof.src = "data:image/jpg;charset=utf8;base64,"+this.responseText;
+       prof.src =this.responseText;
        document.getElementById("headerr").append(prof);
 
     }
@@ -28,13 +28,16 @@ function getallposts(){
         let temp=document.createElement("span");
         temp.innerHTML=response[i]['username'];
         headpost.append(temp);
+
         temp=document.createElement("span");
         temp.innerHTML=response[i]['date_created'];
         headpost.append(temp);
+
         let contentpost= document.createElement("div");
         temp=document.createElement("span");
         temp.innerHTML=response[i]['caption'];
         contentpost.append(temp);
+
         let masterdiv = document.createElement("div");
         masterdiv.append(headpost);
         masterdiv.append(contentpost);

@@ -8,4 +8,5 @@ $query->execute();
 $result = $query->get_result();
 $image = $result->fetch_array();
 $image = $image['image'];
-echo base64_encode($image);
+header("Content-type: image/png");
+echo $image;

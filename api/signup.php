@@ -8,7 +8,7 @@ $password=$_POST["password"];
 $email=$_POST["email"];
 
 $image=$_FILES["image"]["tmp_name"];
-$imagecontent = addslashes(file_get_contents($image));
+$imagecontent = file_get_contents($image);
 
 $query = $conn->prepare("INSERT INTO users(username,firstname,lastname,password,email,image) VALUES(?,?,?,?,?,?)");
 $query->bind_param("ssssss",$username,$fname,$lname,$password,$email,$imagecontent);
